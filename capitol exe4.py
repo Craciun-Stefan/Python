@@ -12,7 +12,7 @@
 #         print("There are no numbers in the string.")
 # print("Finish")
 
-#sau varianta curs:
+# sau varianta curs:
 # cuvant = 'ana'
 # contine_cifre = any(c.isdigit() for c in cuvant)
 # contine_cifre = True
@@ -56,7 +56,7 @@
 # a. Randomly generates a string sequence for the letters a, b, c, d, e and f, with a length of 1000
 # b. Iterate through the sequence
 # c. Get out of the loop when the same character can be found one after the other 3 times (e.g. aaa, bbb etc.)
-# d. Otherwise, print the fact that there is no such sequence 
+# d. Otherwise, print the fact that there is no such sequence
 
 # sequence_of_let = ["a", "b", "c", "d", "e", "f"]
 # j = 1
@@ -74,7 +74,7 @@
 #         continue
 # if j == 1:
 #     print("Nu exista 3 litere la fel")
-# # sau 
+# # sau
 # for i, c in enumerate(cuvant_generat, 1):
 #      c == cuvant_generat[i+1] and c = cuvant_generat[i-1]
 #      break
@@ -82,8 +82,7 @@
 #     print("Nu exsita 3 litere la fel")
 
 
-
-#iegzericicile 5
+# iegzericicile 5
 # Create a program that will:
 # a. Ask for a integer
 # b. Reverse the number (i.e. 123 will be 321)
@@ -94,7 +93,7 @@
 # while nr.isnumeric() == False:
 #     nr = input("Da-mi un numar")
 # nr_invers = [] // METODA 1
-# while len(nr_invers) != len(nr): 
+# while len(nr_invers) != len(nr):
 #     nr_invers.append(nr[i])
 #     i = i - 1
 # print("".join(nr_invers))
@@ -129,9 +128,9 @@
 # while nr < '1' or nr > '9':
 #     nr = input("Da-mi nr intre 1 si 9")
 # print(int(nr) + int(''.join([nr, nr])) + int(''.join([nr, nr, nr])))
-#sau
+# sau
 # suma = sum(map(int, [c, c * 2, c * 3]))
-#sau
+# sau
 # Create a program that will:
 # a. Ask for an integer
 # b. Return all the prime numbers smaller than the given number
@@ -162,8 +161,6 @@
 # #sau
 # len_prefix = 1
 # whil
-
-
 
 
 # def suma_a_3_numere(a, b, c, negativ=False):
@@ -253,8 +250,6 @@
 # print(list(lista_de_nr_inv))
 
 
-
-
 # Create a function that:
 # a. Asks for a number
 # b. Returns the string “Itʼs even” if the number is even, else
@@ -266,13 +261,13 @@
 #     odd = "The number is odd"
 #     nr = input("Da-mi un nr")
 #     if nr.isnumeric() == False:
-#         print("Wrong input") 
+#         print("Wrong input")
 #         fnct_nr_par()
 #     elif int(nr) % 2 == 0:
-#         return even 
+#         return even
 #     else:
 #         return odd
-#print(fnct_nr_par())
+# print(fnct_nr_par())
 
 # Create a function that:
 # a. Accepts any number of arguments (numbers)
@@ -283,7 +278,7 @@
 #         print("Error, no args provided")
 #     else:
 #         numbers_list = list(args)
-#         print(sum(numbers_list)/len(args)) 
+#         print(sum(numbers_list)/len(args))
 # fnct_avg(3, 12, 15, 18)
 
 # Recreate the following function using lambda:
@@ -311,7 +306,7 @@
 # Create a function that checks if the given string is a pangram or not
 # def fnct_pangram(x):
 #     letters_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '']
-#     lista_x = list(set(x)) 
+#     lista_x = list(set(x))
 #     i = 'pangram'
 #     j = 'no pangram'
 #     if len(letters_list) == len(lista_x):
@@ -357,45 +352,18 @@ my_string = 'Practice Problems to Drill List Comprehension in Your Head.'
 # print(new_list)
 # spaces_counter = [a for a in my_string if a == ' '] #ex3
 # print(len(spaces_counter))
-# vowels_remover = [a for a in my_string if a not in ['a', 'e', 'i', 'o', 'u']] #ex4
-# print(''.join(vowels_remover))
-# words_lessthan5 = [a for a in my_string.split(' ') if len(a) <=4] #ex5
+# vowels_remover = ''.join([a for a in my_string.lower() if a not in ['a', 'e', 'i', 'o', 'u']]) #ex4
+# print(vowels_remover)
+# words_lessthan5 = [a for a in my_string.split() if len(a) <=4] #ex5
 # print(words_lessthan5)
-# word_length = {k: len(k) for k in my_string.split(' ')} #ex6
+# word_length = {k: len(k) for k in my_string.split()} #ex6
 # print(word_length)
 loto_lori = {
-    'Stefan&Ralu' : [6, 7, 8, 9, 10, 11],
-    'Andreea&Madalin' : [9, 34, 46, 8, 23, 32],
-    'Alex&Ramona' : [34, 45, 47, 29, 39, 11]
+    'Stefan&Ralu': [6, 7, 8, 9, 10, 11],
+    'Andreea&Madalin': [9, 34, 46, 8, 23, 32],
+    'Alex&Ramona': [34, 45, 47, 29, 39, 11]
 }
 numere_loto = [3, 5, 49, 8, 23, 32]
-rezultate = {k: len(set.intersection(set(v), set(numere_loto))) for k, v in loto_lori.items()}
+rezultate = {k: len(set.intersection(set(v), set(numere_loto)))
+             for k, v in loto_lori.items()}
 print(rezultate)
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
